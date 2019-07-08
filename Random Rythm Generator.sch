@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "Random Rhythm Generator"
 Date "2019-07-05"
-Rev "0.1a"
+Rev "0.1-pre"
 Comp "TBA"
 Comment1 ""
 Comment2 ""
@@ -186,8 +186,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS165" H 8500 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7600 3750 4900 3750
-Wire Wire Line
 	4900 3700 4900 3750
 Connection ~ 4900 3750
 Wire Wire Line
@@ -208,17 +206,6 @@ Wire Wire Line
 Connection ~ 1950 2700
 Wire Wire Line
 	1950 2700 2550 2700
-$Comp
-L power:GND #PWR012
-U 1 1 5D2CC067
-P 3550 6900
-F 0 "#PWR012" H 3550 6650 50  0001 C CNN
-F 1 "GND" H 3555 6727 50  0000 C CNN
-F 2 "" H 3550 6900 50  0001 C CNN
-F 3 "" H 3550 6900 50  0001 C CNN
-	1    3550 6900
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR013
 U 1 1 5D2CC7A8
@@ -243,17 +230,6 @@ F 3 "" H 3550 3100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7600 2850 7600 3750
-$Comp
-L power:GND #PWR016
-U 1 1 5D2D2858
-P 6750 3350
-F 0 "#PWR016" H 6750 3100 50  0001 C CNN
-F 1 "GND" H 6755 3177 50  0000 C CNN
-F 2 "" H 6750 3350 50  0001 C CNN
-F 3 "" H 6750 3350 50  0001 C CNN
-	1    6750 3350
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR018
 U 1 1 5D2D3DCC
@@ -368,17 +344,6 @@ F 3 "~" H 9200 3750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9200 4250 9200 3900
-$Comp
-L power:GND #PWR021
-U 1 1 5D2D6A39
-P 9200 4250
-F 0 "#PWR021" H 9200 4000 50  0001 C CNN
-F 1 "GND" H 9205 4077 50  0000 C CNN
-F 2 "" H 9200 4250 50  0001 C CNN
-F 3 "" H 9200 4250 50  0001 C CNN
-	1    9200 4250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7250 2450 8000 2450
 $Comp
@@ -436,13 +401,13 @@ $EndComp
 $Comp
 L power:+9V #PWR017
 U 1 1 5D328148
-P 7050 1650
-F 0 "#PWR017" H 7050 1500 50  0001 C CNN
-F 1 "+9V" H 7065 1823 50  0000 C CNN
-F 2 "" H 7050 1650 50  0001 C CNN
-F 3 "" H 7050 1650 50  0001 C CNN
-	1    7050 1650
-	1    0    0    -1  
+P 6250 3350
+F 0 "#PWR017" H 6250 3200 50  0001 C CNN
+F 1 "+9V" H 6265 3523 50  0000 C CNN
+F 2 "" H 6250 3350 50  0001 C CNN
+F 3 "" H 6250 3350 50  0001 C CNN
+	1    6250 3350
+	-1   0    0    -1  
 $EndComp
 Text Notes 8100 1000 0    50   ~ 0
 Looped Shift Register
@@ -609,18 +574,7 @@ F 1 "40106" V 1974 6150 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 2250 6150 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf" H 2250 6150 50  0001 C CNN
 	7    2250 6150
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:GND #PWR010
-U 1 1 5D308744
-P 2750 6150
-F 0 "#PWR010" H 2750 5900 50  0001 C CNN
-F 1 "GND" H 2755 5977 50  0000 C CNN
-F 2 "" H 2750 6150 50  0001 C CNN
-F 3 "" H 2750 6150 50  0001 C CNN
-	1    2750 6150
-	1    0    0    -1  
+	0    1    1    0   
 $EndComp
 $Comp
 L power:+9V #PWR07
@@ -693,8 +647,6 @@ F 3 "~" H 4900 4200 50  0001 C CNN
 	1    4900 4000
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6750 1650 7050 1650
 Wire Wire Line
 	9200 3200 10000 3200
 Wire Wire Line
@@ -770,4 +722,54 @@ Wire Wire Line
 Connection ~ 10000 4550
 Wire Wire Line
 	10000 4550 10000 4600
+Wire Wire Line
+	4900 3750 7600 3750
+Wire Wire Line
+	6750 3350 6250 3350
+Wire Wire Line
+	7350 1650 6750 1650
+$Comp
+L power:GND #PWR0103
+U 1 1 5D25B4F3
+P 2750 6150
+F 0 "#PWR0103" H 2750 5900 50  0001 C CNN
+F 1 "GND" H 2755 5977 50  0000 C CNN
+F 2 "" H 2750 6150 50  0001 C CNN
+F 3 "" H 2750 6150 50  0001 C CNN
+	1    2750 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5D25EC97
+P 7350 1650
+F 0 "#PWR0101" H 7350 1400 50  0001 C CNN
+F 1 "GND" H 7355 1477 50  0000 C CNN
+F 2 "" H 7350 1650 50  0001 C CNN
+F 3 "" H 7350 1650 50  0001 C CNN
+	1    7350 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D2611FF
+P 3550 6900
+F 0 "#PWR?" H 3550 6650 50  0001 C CNN
+F 1 "GND" H 3555 6727 50  0000 C CNN
+F 2 "" H 3550 6900 50  0001 C CNN
+F 3 "" H 3550 6900 50  0001 C CNN
+	1    3550 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D261A64
+P 9200 4250
+F 0 "#PWR?" H 9200 4000 50  0001 C CNN
+F 1 "GND" H 9205 4077 50  0000 C CNN
+F 2 "" H 9200 4250 50  0001 C CNN
+F 3 "" H 9200 4250 50  0001 C CNN
+	1    9200 4250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
